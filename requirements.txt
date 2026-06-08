@@ -1,0 +1,29 @@
+# --- Scraping ---
+requests>=2.32
+beautifulsoup4>=4.12
+
+# --- Core AI frameworks ---
+langchain>=0.3.0
+langchain-community>=0.3.0
+langgraph>=0.2.0
+
+# --- LLM / embedding providers ---
+# CPU-only PyTorch keeps the Hugging Face Space build small and fast.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.2                       # CPU inference backend
+langchain-huggingface>=0.1.2     # local model + HF Inference + embeddings
+sentence-transformers>=3.0       # local embeddings (all-MiniLM-L6-v2)
+transformers>=4.44               # on-device LLM (Qwen2.5-Instruct)
+langchain-ollama>=0.2.0          # fast local models via the Ollama app (local dev)
+langchain-openai>=0.2.0          # optional: OpenAI / GitHub Models providers
+
+# --- Vector store ---
+langchain-chroma>=0.1.4
+chromadb>=0.5.0
+
+# --- Frontend ---
+streamlit>=1.39
+markdown>=3.6                     # render agent answers (markdown -> HTML) in cards
+
+# --- Utilities ---
+python-dotenv>=1.0

@@ -1,6 +1,21 @@
-# gitignore template for LangChain products, e.g., LangGraph, LangSmith
-# website: https://www.langchain.com/
-# website: https://www.langchain.com/langgraph
+# Secrets — NEVER commit
+.env
+.env.*
+!.env.example
 
-# LangGraph
-.langgraph_api/
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Data / build artifacts
+data/*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
